@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "material": "^0.9.20",
+    "vite": "^6.0.4"
+  }
+}
