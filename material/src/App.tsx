@@ -16,7 +16,7 @@ function App() {
     palette: {
       mode: darkMode ? "dark" : "light",
       primary: {
-        main: darkMode ? "#90caf9" : "#3066be", // Replace with your desired primary color
+        main: darkMode ? "#90caf9" : "#f5f5f5", // Replace with your desired primary color
       },
       secondary: {
         main: darkMode ? "#f48fb1" : "#03a9f4", // Replace with your desired secondary color

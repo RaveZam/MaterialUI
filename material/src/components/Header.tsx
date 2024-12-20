@@ -30,11 +30,7 @@ const Header: React.FC<{
           Home Page
         </Typography>
         <IconButton onClick={() => setDarkMode(!darkMode)}>
-          {darkMode ? (
-            <DarkModeIcon />
-          ) : (
-            <LightModeIcon className="text-white" />
-          )}
+          {darkMode ? <DarkModeIcon /> : <LightModeIcon />}
         </IconButton>
       </Toolbar>
     </AppBar>
