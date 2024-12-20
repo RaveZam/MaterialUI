@@ -7,7 +7,7 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 
-const Header: React.FunctionComponent<{
+const Header: React.FC<{
   darkMode: boolean;
   setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
   toggleSidebar: () => void;

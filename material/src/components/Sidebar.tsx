@@ -2,17 +2,24 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Drawercomponent from "./Drawercomponent";
 import Typography from "@mui/material/Typography";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "./Header";
 
 const collapsedWidth = 60;
 const expandedWidth = 220;
 
-const Sidebar: React.FunctionComponent<{
+const Sidebar: React.FC<{
   darkMode: boolean;
   setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
 }> = ({ darkMode, setDarkMode }) => {
-  const [isCollapsed, setIsCollapsed] = useState<boolean>(false);
+  const [isCollapsed, setIsCollapsed] = useState<boolean>(() => {
+    const savedCollapsedState = localStorage.getItem("isCollapsed");
+    return savedCollapsedState ? JSON.parse(savedCollapsedState) : true;
+  });
+
+  useEffect(() => {
+    localStorage.setItem("isCollapsed", JSON.stringify(isCollapsed));
+  }, [isCollapsed]);
 
   const toggleSidebar = () => {
     setIsCollapsed(!isCollapsed);
